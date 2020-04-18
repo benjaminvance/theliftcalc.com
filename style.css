@@ -1,0 +1,85 @@
+.body {
+    font-family: 'Overpass', sans-serif;
+    text-transform: uppercase;
+}
+
+.all-forms {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 350px 0px 400px;
+}
+
+.all-radios {
+    margin: 10px 0px 5px;
+}
+
+.question {
+    font-family: 'Overpass', sans-serif;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainhead {
+    text-align: center;
+    padding: 180px 0px 260px;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.footer {
+    text-align: center;
+    padding: 86px 0px 80px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    margin: 25px 0px 15px;
+}
+
+
+/* INDEX PAGE */
+
+/* BMI PAGE */
+
+.yourbmi {
+    padding-top: 20px;
+}
+
+/* MAX PAGE */
+
+.max-radios {
+    padding-bottom: 20px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TDEE PAGE */
+
+
+
+/* WILKS SCORE */
+
+.wilks-forms {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
