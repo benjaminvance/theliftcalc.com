@@ -49,12 +49,24 @@
 }
 
 
-/* INDEX PAGE */
+.foot-img {
+    max-width: 20px;
+    height: 20px;
+    margin: 0px 10px 20px 10px;
+}
+
+.radio-right {
+    padding-left: 20px;
+}
 
 /* BMI PAGE */
 
 .yourbmi {
     padding-top: 20px;
+}
+
+.bmi-radios {
+    padding-bottom: 30px;
 }
 
 /* MAX PAGE */
@@ -70,9 +82,23 @@
     align-items: center;
 }
 
+.max-btn {
+margin-bottom: 25px;
+}
+
 /* TDEE PAGE */
 
+.tdee-faq {
+    padding: 20px 30px 0px 30px;
+}
 
+.sex-radios {
+    padding-bottom: 20px;
+}
+
+.tdee-inputs {
+    padding-bottom: 15px;
+}
 
 /* WILKS SCORE */
 
@@ -80,6 +106,20 @@
     text-align: center;
     background-color: black;
     color: white;
+}
+
+.wilks-button {
+    margin-bottom: 30px;
+}
+
+/* MOBILE SIZE */
+
+@media only screen and (max-width: 600px) {
+    .question {
+        font-family: 'Overpass', sans-serif;
+        margin: 0px 30px 0px 30px;
+    }
+    
 }
 
 
