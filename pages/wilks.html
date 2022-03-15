@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>The Lift Calc // WILKS CALC</title>
+  <link rel="icon" href="../misc/favicon.png">
   
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -31,7 +32,7 @@
             <a href="tdee.html"><h4 class="text-white">TDEE</h4></a>
             <a href="max.html"><h4 class="text-white">MAX</h4></a>
             <a href="wilks.html"><h4 class="text-white">WILKS</h4></a>
-            <span class="text-muted">Lift Calc</span>
+            <span class="text-muted">The Lift Calc</span>
           </div>
         </div>
         <nav class="navbar navbar-dark">
@@ -48,34 +49,34 @@
 
   <form>
     
-<div class="form-check form-check-inline">
+<div class="form-check form-check-inline sex-radios">
   <input class="form-check-input" type="radio" name="sex" id="inlineRadio1" value="1">
   <label class="form-check-label" for="inlineRadio1">MALE</label>
 </div>
-<div class="form-check form-check-inline">
+<div class="form-check form-check-inline sex-radios">
   <input class="form-check-input" type="radio" name="sex" id="inlineRadio2" value="female">
   <label class="form-check-label" for="inlineRadio2">FEMALE</label>
 </div>
 </br>
-<div class="form-check form-check-inline">
+<div class="form-check form-check-inline sex-radios">
   <input class="form-check-input" type="radio" name="units" value="lb">
   <label class="form-check-label" for="inlineRadio1">STANDARD</label>
 </div>
-<div class="form-check form-check-inline">
+<div class="form-check form-check-inline sex-radios">
   <input class="form-check-input" type="radio" name="units" value="kg">
   <label class="form-check-label" for="inlineRadio2">METRIC</label>
 </div>
 
   <div class="row justify-content-center align-items-center">
-    <div class="col col-md-2 mb-3">
+    <div class="col col-md-2 mb-2">
       <input type="number" class="form-control" id="weight" placeholder="BODYWEIGHT (LBS/KG)">
     </div>
-    <div class="col col-md-2 mb-3">
+    <div class="col col-md-2 mb-2">
       <input type="number" class="form-control" id="total" placeholder="TOTAL (LBS/KG)">
     </div>
   </div>
 
-  <button type="button" class="btn btn-dark" onclick="computeWilks()">CALCULATE</button>
+  <button type="button" class="btn btn-dark wilks-button" onclick="computeWilks()">CALCULATE</button>
 </form>
 
 <script>
@@ -114,52 +115,23 @@ function computeWilks(){
 
 </script>
 
-<p>YOUR WILKS SCORE IS:</p>
+<p>YOUR WILKS SCORE:</p>
 <h3 id="wilks"></h3>
+</section>
+
+<!--- Footer -->
+
+<section class="white footer">
+
+  <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=thebenvance@gmail.com&su=SUBJECT&body=BODY&&tf=1/"> <img class="foot-img" src="../misc/email.png" alt="Contact Email"> </a>
+  <a href="https://www.twitter.com/partyinmyvance"> <img class="foot-img" src="../misc/twitter.png" alt="Follow on Twitter"> </a>
+  <a href="https://www.instagram.com/partyinmyvance"> <img class="foot-img" src="../misc/ig.png" alt="Follow on Instagram"> </a>
+
+  <p>© Copyright 2020 The Lift Calc</p>
+  <p>Created by Ben Vance</p>
+  <a target="_blank" href="https://icons8.com/icons/set/rod-barbells">Gym icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 </section>
 
 </body>
 </html>
-
-<!-- total * 500 / a + (16.2606339 * bodweight) +  Math.pow(-0.002388645 * bodyweight,2) + Math.pow(-0.00113732 * bodyweight,3) + Math.pow(0.000000701863,4) + Math.pow(0.00000001291,5)
-
-((-0.002388645 * bodyweight) * (-0.002388645 * bodyweight))
-
-var total = 1100;
-var bodyweight = 180;
-
-
-total * 500 / -216.0475144 + (16.2606339 * bodyweight) +  Math.pow(-0.002388645 * bodyweight,2) + Math.pow(-0.00113732 * bodyweight,3) + Math.pow(0.00000701863 * bodyweight,4) + Math.pow(0.00000001291 * bodyweight,5);
-
-
-var a=0,b=0,c=0,d=0,e=0,f=0;
-function computeWilks(){
-    var weight = document.getElementById('weight').value;
-    var total = document.getElementById('total').value;
-     if (document.getElementById('units').value === 'lb'){
-          weight = (weight * 0.453592)
-          total = (total * 0.453592)
-       }
-     if (document.getElementById('sex').value === 'female'){
-        a = 594.31747775582;
-        b = -27.23842536447;
-        c = 0.82112226871;
-        d = -0.00930733913;
-        e = 4.731582e-05;
-        f = -9.054e-08;
-     }else{
-      a = -216.0475144;
-      b= 16.2606339;
-      c= -0.002388645;
-      d = -0.00113732;
-      e = 7.01863e-06;
-      f = -1.291E-08;
-      }
-        
- var coeff = (500) / ((a) + (b * weight) + (c * Math.pow(weight, 2)) + (d * Math.pow(weight, 3)) + (e * Math.pow(weight, 4)) + (f * Math.pow(weight, 5)));
- var wilks = (coeff * total);
-        document.getElementById('wilks').innerHTML = "Wilks = " + wilks;
- }
- 
-
- -->

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>The Lift Calc // TDEE CALC</title>
+  <link rel="icon" href="../misc/favicon.png">
   
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -31,7 +32,7 @@
           <a href="tdee.html"><h4 class="text-white">TDEE</h4></a>
           <a href="max.html"><h4 class="text-white">MAX</h4></a>
           <a href="wilks.html"><h4 class="text-white">WILKS</h4></a>
-          <span class="text-muted">Lift Calc</span>
+          <span class="text-muted">The Lift Calc</span>
         </div>
       </div>
       <nav class="navbar navbar-dark">
@@ -55,22 +56,22 @@
       <input class="form-check-input" type="radio" name="unit" id="inlineRadio1" value="standard" checked>
       <label class="form-check-label" for="inlineRadio1">STANDARD</label>
     </div>
-    <div class="form-check form-check-inline all-radios">
+    <div class="form-check form-check-inline all-radios radio-right">
       <input class="form-check-input" type="radio" name="unit" id="inlineRadio2" value="metric">
       <label class="form-check-label" for="inlineRadio2">METRIC</label>
     </div>
       
     </br>
-  <div class="form-check form-check-inline justify-content-center align-items-center all-radios">
+  <div class="form-check form-check-inline justify-content-center align-items-center all-radios sex-radios">
     <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="men" checked>
     <label class="form-check-label" for="inlineRadio1">MALE</label>
   </div>
-  <div class="form-check form-check-inline justify-content-center align-items-center">
+  <div class="form-check form-check-inline justify-content-center align-items-center sex-radios radio-right">
     <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="women" value="option2">
     <label class="form-check-label" for="inlineRadio2">FEMALE</label>
   </div>
 
-  <div class="form-row justify-content-center align-items-center">
+  <div class="form-row justify-content-center align-items-center tdee-inputs">
     <div class="col-md-2 mb-3">
       <label for="validationDefault01">AGE</label>
       <input type="number" class="form-control" id="age-field" placeholder="AGE IN YEARS" required>
@@ -89,20 +90,20 @@
     <input class="form-check-input" type="radio" name="active-radio" id="inlineRadio1" value="1.2" checked>
     <label class="form-check-label" for="inlineRadio1">SEDENTARY</label>
   </div>
-  <div class="form-check form-check-inline justify-content-center align-items-center all-radios">
+  <div class="form-check form-check-inline justify-content-center align-items-center all-radios radio-right">
     <input class="form-check-input" type="radio" name="active-radio" id="inlineRadio2" value="1.375">
     <label class="form-check-label" for="inlineRadio2">LIGHTLY ACTIVE</label>
   </div>
 
-  <div class="form-check form-check-inline justify-content-center align-items-center all-radios">
+  <div class="form-check form-check-inline justify-content-center align-items-center all-radios radio-right">
     <input class="form-check-input" type="radio" name="active-radio" id="inlineRadio3" value="1.55">
     <label class="form-check-label" for="inlineRadio3">MODERATELY ACTIVE</label>
   </div>
-  <div class="form-check form-check-inline justify-content-center align-items-center all-radios">
+  <div class="form-check form-check-inline justify-content-center align-items-center all-radios radio-right">
     <input class="form-check-input" type="radio" name="active-radio" id="inlineRadio4" value="1.725">
     <label class="form-check-label" for="inlineRadi43">VERY ACTIVE</label>
   </div>
-  <div class="form-check form-check-inline justify-content-center align-items-center all-radios">
+  <div class="form-check form-check-inline justify-content-center align-items-center all-radios radio-right">
     <input class="form-check-input" type="radio" name="active-radio" id="inlineRadio5" value="1.9">
     <label class="form-check-label" for="inlineRadio5">EXTREMELY ACTIVE</label>
   </div>
@@ -167,46 +168,42 @@ function tdeeCalculator() {
   FAQ
 </h3>
 <p>
-What is my TDEE? </br>
-Total daily energy expenditure, also called your maintenance.  This is how many calories you need to eat to maintain your weight.  If you eat more caloires than this you will gain weight (surplus), if you eat less (deficit) you will lose weight.  This is often referred to as CICO, calories in calories out.  Threre are many diets out there and when they work they are simply manipulating your calorie balance. </br>
+<b>What is my TDEE?</b> </br>
+Total daily energy expenditure also called your maintenance.  This is how many calories you need to eat to maintain your weight.  If you eat more calories than this you will gain weight (surplus), if you eat less (deficit) you will lose weight.  This is often referred to as CICO, calories in calories out.  There are many diets out there and when they work they are simply manipulating your calorie balance. </br>
 </br>
-What do I do with this information? </br>
+<b>What do I do with this information?</b> </br>
   1. Estimate your TDEE.  Remember this calculator only gives you an estimate.  You will have to adjust over time. </br>
   2. Set a goal.  Decide if you would like to gain weight or "cut", or lose weight and "bulk".  Adjust your TDEE by adding or subtracting 10-20% (TDEE x 1.1 or 1.2). </br>
-  3. Track your calories and weight and plan to adjust over time.  When you gain or lose weight you will need more or less calories to hit your maintenance.  Adjust accordingly.  Also remember your weight may fluctuate daily.  Track your weight over time and watch for trends. </br>
+  3. Track your calories and weight and plan to adjust over time.  When you gain or lose weight you will need more or fewer calories to hit your maintenance.  Adjust accordingly.  Also, remember your weight may fluctuate daily.  Track your weight over time and watch for trends. </br>
   4. Be patient. </br>
 </br>
-How do I track calories? </br>
-The most recommeneded way of trackning calories would be MyFitnessPal. </br>
+<b>How do I track calories?</b> </br>
+The most recommended way of tracking calories would be MyFitnessPal. </br>
 </br>
-Should I worry about macros? </br>
+<b>Should I worry about macros?</b> </br>
 Start by tracking calories and protein first.  A good rule of thumb is 0.8g/lb of body weight for protein and 0.5g/lb of fats.  Fill the rest of your calories with carbs.  Again, this will need to be adjusted over time. </br>
 </br>
-Can I gain muscle and lose fat at the same time? </br>
-The simple answer for most people is no.  Unless you are on performance enhacing drugs (PEDs) or are very overweight, you cannot both gain muscle and lose fat simatameiously.  
+<b>Can I gain muscle and lose fat at the same time?</b> </br>
+The simple answer for most people is no.  Unless you are on performance enhancing drugs (PEDs) or are very overweight, you cannot both gain muscle and lose fat simultaneously.  
 </p>
 
 
 </section>
+
+<!--- Footer -->
+
+<section class="black footer">
+
+  <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=thebenvance@gmail.com&su=SUBJECT&body=BODY&&tf=1/"> <img class="foot-img" src="../misc/email.png" alt="Contact Email"> </a>
+  <a href="https://www.twitter.com/partyinmyvance"> <img class="foot-img" src="../misc/twitter.png" alt="Follow on Twitter"> </a>
+  <a href="https://www.instagram.com/partyinmyvance"> <img class="foot-img" src="../misc/ig.png" alt="Follow on Instagram"> </a>
+
+  <p>© Copyright 2020 The Lift Calc</p>
+  <p>Created by Ben Vance</p>
+  <a target="_blank" href="https://icons8.com/icons/set/rod-barbells">Gym icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+</section>
+
+
 </body>
 </html>
-
-<!--
-
-Men:  BMR = 88.362 + (13.397 x weight in kg) + (4.799 x height in cm) - (5.677 x age in years)
-Women: BMR = 447.593 + (9.247 x weight in kg) + (3.098 x height in cm) - (4.330 x age in years)
-
-tdee = (447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)) * active
-
-Height: 6’0” = 72 inches = 182.88cm (to convert inches to centimeters, multiply your height in inches by 2.54)
-Weight: 185 lbs = 84.09kg (to convert pounds to kilograms, divide your weight in pounds by 2.2)
-
-To calculate your approximate TDEE, simply multiply these activity factors by your BMR:
-
-Sedentary (little to no exercise + work a desk job) = 1.2
-Lightly Active (light exercise 1-3 days / week) = 1.375
-Moderately Active (moderate exercise 3-5 days / week) = 1.55
-Very Active (heavy exercise 6-7 days / week) = 1.725
-Extremely Active (very heavy exercise, hard labor job, training 2x / day) = 1.9
-
--->
